@@ -39,16 +39,15 @@ this.employees.push(employee);
 getDepartmentSalary(){
 return this.employees.reduce((total, employee) => total + employee.salary,0);
 }
-
+//Task4:Handle Bonuses for Managers
+calcualteTotalSalaryWithBonus(){
+return this.employees.reduce((total, employee, bonus) => total + employee.salary + employee.bonus,0)
 }
+}
+
 const engineering = new Department("Engineering");
 const marketing = new Department("Marketing");
 engineering.addEmployee(alice);
 engineering.addEmployee(charlie);
 marketing.addEmployee(bob);
 marketing.addEmployee(diana);
-
-//Task4:Handle Bonuses for Managers
-function calculateTotalSalaryWithBonus(){
-
-}
